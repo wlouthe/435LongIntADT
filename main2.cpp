@@ -211,8 +211,8 @@ int main()
 {
     int x;
     x = 16;
-    DoublyLinkedList *myDLL = new DoublyLinkedList;
-    myDLL->insertFirst(x);
-    cout << myDLL->getFirst() << myDLL->getValue(0);
+    DoublyLinkedList myDLL;
+    myDLL.insertFirst(x);
+    cout << myDLL.getFirst() << myDLL.getValue(0);
     return 0;
 }

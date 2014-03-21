@@ -1,7 +1,7 @@
 #include "LongIntADT.h"
 //#include "ListADT.h"
 
-LongIntADT:LongIntADT(char *x)
+LongIntADT::LongIntADT(char *x)
 {
     ListADT myNum;
     int longNumSize = longNum.size();

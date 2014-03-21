@@ -31,10 +31,8 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="DoublyLinkedList">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
 		<Unit filename="DoublyLinkedList.cpp" />
+		<Unit filename="DoublyLinkedList.h" />
 		<Unit filename="Link.cpp">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
