@@ -1,6 +1,8 @@
 #include "DoublyLinkedList.h"
 #include "Link.h"
 
+#define NULL 0
+
 DoublyLinkedList::DoublyLinkedList()
 {
     last = first;
