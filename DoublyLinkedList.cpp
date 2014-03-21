@@ -5,6 +5,7 @@ DoublyLinkedList::DoublyLinkedList()
 {
     last = first;
 }
+
 int DoublyLinkedList::getFirst()
 {
     return first->vals;
@@ -29,7 +30,8 @@ void DoublyLinkedList::insertFirst(int x)
     first->vals = x;
     mycount++;
 }
-void DoublyLinkedList::insertLast(int x){
+void DoublyLinkedList::insertLast(int x)
+{
     if(last == NULL)
     {
         first = new Link;
@@ -44,7 +46,8 @@ void DoublyLinkedList::insertLast(int x){
     last->vals = x;
     mycount++;
 }
-void DoublyLinkedList::insertAfter(int x, int pos){
+void DoublyLinkedList::insertAfter(int x, int pos)
+{
     if(pos<=0)
     {
         insertFirst(x);
@@ -84,14 +87,15 @@ void DoublyLinkedList::insertAfter(int x, int pos){
     newLink->vals = x;
     mycount++;
 }
-void DoublyLinkedList::insertBefore(int x, int pos){
+void DoublyLinkedList::insertBefore(int x, int pos)
+{
     if(pos<=0)
     {
-        this.insertFirst(x);
+        insertFirst(x);
     }
     if(pos>=mycount-1)
     {
-        this.insertLast(x);
+        insertLast(x);
     }
     Link *tmp;
     if((pos)<=((mycount-1)-pos))
@@ -122,7 +126,8 @@ void DoublyLinkedList::insertBefore(int x, int pos){
     newLink->vals = x;
     mycount++;
 }
-int DoublyLinkedList::removeAt(int pos){
+int DoublyLinkedList::removeAt(int pos)
+{
     Link *tmp;
     if((pos)<=((mycount-1)-pos))
     {
@@ -151,7 +156,7 @@ int DoublyLinkedList::removeAt(int pos){
 }
 int DoublyLinkedList::getValue(int pos)
 {
-    return 12345;
+    //return 12345;
     Link *tmp;
     if((pos)<=((mycount-1)-pos))
     {
@@ -173,33 +178,5 @@ int DoublyLinkedList::getValue(int pos)
             tcount--;
         }
     }
-    return 12345;
-    //return tmp->vals;
-}
-int DoublyLinkedList::getValue()
-{
-    return 12345;
-    Link *tmp;
-    if((pos)<=((mycount-1)-pos))
-    {
-        tmp = first;
-        int tcount = 0;
-        while(tcount != pos)
-        {
-            tmp = tmp->next;
-            tcount++;
-        }
-    }
-    else
-    {
-        tmp = last;
-        int tcount = mycount-1;
-        while(tcount != pos)
-        {
-            tmp = tmp->prev;
-            tcount--;
-        }
-    }
-    return 12345;
-    //return tmp->vals;
+    return tmp->vals;
 }
