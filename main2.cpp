@@ -4,42 +4,6 @@
 
 using namespace std;
 
-
-/*
- /////////////////////////////////////////////
- // Original "insertAfter" for DLL
- /////////////////////////////////////////////
- Link *tmp;
- if((pos)<=((mycount-1)-pos))
- {
- tmp = first;
- int tcount = 0;
- while(tcount != pos)
- {
- tmp = tmp->next;
- tcount++;
- }
- }
- else
- {
- tmp = last;
- int tcount = mycount-1;
- while(tcount != pos)
- {
- tmp = tmp->prev;
- tcount--;
- }
- }
- Link *newLink = new Link;
- tmp->next->prev = newLink;
- newLink->next = tmp->next;
- newLink->prev = tmp;
- tmp->next = newLink;
- newLink->VALUE = x;
- mycount++;
-//*/
-
-
 class Link
 {
 public:
@@ -82,8 +46,10 @@ public:
     void INSERT_LEFT(int); //send value
     bool IS_FIRST(int); //returns T/F, send pos
     bool IS_LAST(int); //returns T/F, send pos
+    void SET_VALUE(int, int); // at the current pos(int 1), sets the value(int 2)
+    int GET_VALUE(int); // at the current pos, returns the value
     
-}
+};
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 //// Begin DLL functions
@@ -262,6 +228,91 @@ int DoublyLinkedList::getValue(Link *pos)
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 //// Begin ListADT functions
 /////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*
+ /////////////////////////////////////////////
+ //// Function definitions
+ /////////////////////////////////////////////
+ 
+ int mycount;
+ 
+ /////////////////////////////////////////////
+ // Original "insertAfter" for DLL
+ /////////////////////////////////////////////
+ Link *tmp;
+ if((pos)<=((mycount-1)-pos))
+ {
+ tmp = first;
+ int tcount = 0;
+ while(tcount != pos)
+ {
+ tmp = tmp->next;
+ tcount++;
+ }
+ }
+ else
+ {
+ tmp = last;
+ int tcount = mycount-1;
+ while(tcount != pos)
+ {
+ tmp = tmp->prev;
+ tcount--;
+ }
+ }
+ Link *newLink = new Link;
+ tmp->next->prev = newLink;
+ newLink->next = tmp->next;
+ newLink->prev = tmp;
+ tmp->next = newLink;
+ newLink->VALUE = x;
+ mycount++;
+ //*/
+
+int ListADT::GET_FIRST()
+{
+    LOCATE_POS(0);
+}
+int ListADT::GET_LAST()
+{
+    LOCATE_POS(mycount-1);
+}
+int ListADT::NEXT_RIGHT(int pos)
+{
+    
+}
+int ListADT::NEXT_LEFT(int pos)
+{
+    
+}
+void ListADT::INSERT_RIGHT(int val)
+{
+    
+}
+void ListADT::INSERT_RIGHT(int val)
+{
+    
+}
+bool ListADT::IS_FIRST(int pos)
+{
+    
+}
+bool ListADT::IS_LAST(int pos)
+{
+    
+}
+void ListADT::SET_VALUE(int pos, int val)
+{
+    
+}
+int ListADT::GET_VALUE(int pos)
+{
+    
+}
+int ListADT::LOCATE_POS(int pos)
+{
+    
+}
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 //// Begin Main Function
